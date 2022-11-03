@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
 :root{
+
+     /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
     --main-color:#d3ad7f;
     --black:#13131a;
     --bg:#010103;
@@ -66,6 +69,7 @@ section{
     color:#fff;
     background: var(--main-color);
     cursor: pointer;
+    border-radius: 1.5rem 0.25rem;
 }
 
 .btn:hover{
@@ -85,7 +89,7 @@ section{
 }
 
 .header .logo img{
-    height: 6rem;
+    height: 7rem;
 }
 
 .header .navbar a{
@@ -208,7 +212,7 @@ section{
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background:url(../img/home-img2.jpg) no-repeat;
+    background: rgb(0, 0, 0);
     background-size: cover;
     background-position: center;
 }
@@ -230,6 +234,137 @@ section{
     padding:1rem 0;
     color:#eee;
 }
+
+
+
+
+.home__images{
+    position: relative;
+    width: 325px;
+    height: 378px;
+    justify-self: center;
+  }
+  
+  .home__images img{
+    position: absolute;
+  }
+  
+  .home__liquid{
+    max-width: initial;
+    width: 500px;
+    left: 17.5rem;
+  }
+  
+  .home__coffee{
+    width: 260px;
+    transform: rotate(15deg);
+    left: 30rem;
+    right: 0;
+    top: 1rem;
+    margin: 0 auto;
+    animation: float-coffee 5s ease-in-out infinite;
+  }
+  
+  .home__grains2{
+    width: 90px;
+    right: -25.5rem;
+    bottom: 0.5rem;
+  }
+  
+  .home__grains1{
+    width: 100px;
+    transform: rotate(-25deg);
+    top: 15rem;
+    left: 23.65rem;
+  }
+  
+  .home__leaf:nth-child(1),
+  .home__leaf:nth-child(6){
+    width: 50px;
+    transform: rotate(30deg);
+  }
+  
+  .home__leaf:nth-child(2),
+  .home__leaf:nth-child(4),
+  .home__leaf:nth-child(5){
+    width: 40px;
+  }
+  
+  /* Move sheets into position */
+
+  .home__leaf:nth-child(1){
+    top: -1rem;
+    right: 3rem;
+  }
+  
+  .home__leaf:nth-child(2){
+    transform: rotate(-60deg);
+    top: 1.5rem;
+    left: 65.20rem;
+  }
+  
+  .home__leaf:nth-child(3){
+    width: 20px;
+    transform: rotate(-15deg);
+    top: 8rem;
+    right: 5rem;
+  }
+  
+  .home__leaf:nth-child(4){
+    bottom: 6rem;
+    left: 26rem;
+  }
+  
+  .home__leaf:nth-child(5){
+    transform: rotate(-30deg);
+    bottom: -6px;
+    right: -16rem;
+  }
+  
+  .home__leaf:nth-child(6){
+    bottom: 18rem;
+    left: 59rem;
+  }
+
+  /* Animation coffee */
+
+@keyframes float-coffee{
+    0%{
+      transform: translateY(0) rotate(15deg);
+    }
+    50%{
+      transform: translateY(-1.5rem) rotate(15deg);
+    }
+    100%{
+      transform: translateY(0) rotate(15deg);
+    }
+  }
+  
+  /*=============== BREAKPOINTS ===============*/
+  /* For small devices */
+  @media screen and (max-width: 330px){
+    .container{
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  
+    .home__images{
+      width: 245px;
+      height: 320px;
+    }
+    .home__liquid{
+      width: 250px;
+      left: 0;
+    }
+    .home__coffee{
+      width: 100px;
+    }
+    .home__grains1,
+    .home__grains2{
+      width: 70px;
+    }
+  }
+
 
 .about .row{
     display: flex;
@@ -621,6 +756,10 @@ section{
         background-position: left;
         justify-content: center;
         text-align: center;
+    }
+
+    .home__images {
+      display: none;
     }
 
     .home .content h3{
